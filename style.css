@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-dark: #1e293b;
+  --primary-darker: #0f172a;
+  --accent: #f59e0b;
+  --accent-dark: #d97706;
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --bg-light: #f8fafc;
+  --white: #ffffff;
+  --gray-200: #e2e8f0;
+  --gray-400: #cbd5e1;
+  --gray-600: #475569;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+}
+
+p {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.header {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.nav a {
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+.cta-button {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+.cta-button-large {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-darker) 100%);
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 24px;
+  color: var(--white);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #d1d5db;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+/* Services Section */
+.services {
+  padding: 80px 0;
+  background-color: var(--bg-light);
+}
+
+.services h2 {
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.service-card {
+  background-color: var(--white);
+  padding: 32px 24px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.service-card h3 {
+  color: var(--text-dark);
+}
+
+.service-card p {
+  color: var(--text-light);
+}
+
+/* About Section */
+.about {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.about h2 {
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.about-description {
+  font-size: 1.125rem;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px;
+  line-height: 1.8;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.info-item {
+  text-align: center;
+}
+
+.info-item h4 {
+  color: var(--text-dark);
+}
+
+.info-item p {
+  color: var(--text-light);
+}
+
+/* Contact Section */
+.contact {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.contact p {
+  color: #d1d5db;
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-darker);
+  color: var(--white);
+  padding: 48px 0 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.footer-section p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #9ca3af;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  border-top: 1px solid #374151;
+  padding-top: 24px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+
+  .header-content {
+    gap: 16px;
+  }
+
+  .nav ul {
+    display: none;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.125rem;
+  }
+
+  .services,
+  .about,
+  .contact {
+    padding: 60px 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .header-content {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .cta-button {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero h2 {
+    font-size: 1.75rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .services,
+  .about,
+  .contact {
+    padding: 40px 0;
+  }
+}
+
