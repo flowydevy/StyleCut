@@ -1,0 +1,1 @@
+This is my first html and slight css website that i built that you can also find in my portofolio. It is pretty simple compared to the other ones you see on my portofolio but the time apart the projects was 3 months so i had time to study html and css a little bit more.  
